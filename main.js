@@ -27,6 +27,7 @@ function openMainWindow() {
         height: 2018,
         fullscreen: true,
         resizable: false,
+        //frame: false
     })
     mainWindow.loadFile("index.html");
     if (process.env.NODE_ENV == 'production') mainWindow.setMenu(null);

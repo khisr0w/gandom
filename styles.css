@@ -1,3 +1,64 @@
-body {
-    padding: .5rem 2rem;
+html, body {
+    background-color: #2b2e4a;
+    margin: 0 20px;
+
+}
+
+.navbar1 {
+    /* position: relative; */
+    /* display: -webkit-box; */
+    display: -ms-flexbox;
+    /* display: flex; */
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    text-align: center;
+}
+
+.bg-dark1 {
+    background-color: #2b2e4a;
+}
+.btn {
+    position: absolute;
+    right: 20px;
+}
+
+.status-bar {
+    margin-bottom: 30px;
+}
+
+.main-bar {
+    height: 55rem;
+}
+
+.notification {
+    margin: 0 0 0 80px;
+    background-color: #903749;
+    border-radius: 20px 0 0 20px;
+    border-color: white;
+    border-width: medium;
+    border-style: solid;
+}
+
+.purchase {
+    background-color: #53354a;
+    margin: 0 10px;
+    border-color: white;
+    border-width: medium;
+    border-style: solid;
+}
+
+.to-do {
+    margin: 0 80px 0 0;
+    background-color: #903749;
+    border-radius: 0 20px 20px 0;
+    border-color: white;
+    border-width: medium;
+    border-style: solid;
 }
