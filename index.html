@@ -23,26 +23,31 @@
 </head>
 
 <body>
-    <nav class="navbar1 navbar-dark bg-dark1">
-        <a class="navbar-brand" href="#">
-          <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-          Gandom Inventory Managment System
-        </a>
-        <button class="btn btn-outline-danger">Exit System</button>
-      </nav>
     <div class="row status-bar">
+        <div class="col-12">
+            <h1 class="title">Gandom Inventory Management System</h1>
+            <button class="btn btn-outline-success" id="exit-btn">Exit System</button>
+        </div>
     </div>
     <div class="row main-bar">
-        <div class="col h-100 notification">
+        <div class="col notification">
+            <h2 class="sub-title">Notifications</h2>
+            <hr>
+            <div class="card-container"></div>
         </div>
         <div class="col-6 purchase">
+            <h2 class="sub-title">Purchase</h2>
+            <hr>
+            <div class="card-container">
 
+            </div>
         </div>
         <div class="col to-do">
-            
+            <h2 class="sub-title">To-do</h2>
+            <hr>
+            <div class="card-container"></div>
         </div>
     </div>
-
 
     <script src="index.js"></script>
 </body>
