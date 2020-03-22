@@ -1,0 +1,19 @@
+{
+  "name": "gandom",
+  "version": "1.0.0",
+  "description": "Inventory management and barcode utility for Gandom chain of stores",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Sayed Abid Hashimi",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "electron": "^8.1.1",
+    "jsbarcode": "^3.11.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
+  }
+}
