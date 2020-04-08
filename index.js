@@ -15,6 +15,7 @@ exitBtn.addEventListener('click', (e) => {
     ipcRenderer.send('app:exit');
 });
 
+// read barcode event
 document.body.addEventListener('keydown', (e) => {
 
     if (isPrefixMet) captureBarcode(e);
@@ -29,6 +30,7 @@ function matchPrefix(e) {
     } else if (e.keyCode == 190) {
         if (prefix[0] == 49) {
             prefix = [];
+            submitBarcode();
             return true;
         } else return false;
     } else return false;
@@ -37,9 +39,6 @@ function matchPrefix(e) {
 function captureBarcode(e) {
 
     if (e.keyCode == 13) {
-        makeItemCard(barcode);
-        console.log(barcode);
-        barcode = "";
         isPrefixMet = false;
     } else barcode += e.key;
 }
@@ -68,6 +67,18 @@ function makeItemCard(barcodeText) {
     root.appendChild(h5);
     root.appendChild(div);
     root.style.margin = '0 0 20px'
-    
-    document.querySelector(".purchase .card-container").appendChild(root);
+
+    var cardContainer = document.querySelector(".purchase .card-container");
+    cardContainer.appendChild(root);
+    cardContainer.scrollTop = cardContainer.scrollHeight;
+}
+
+function submitBarcode() {
+    setTimeout(() => {
+        if (!isPrefixMet) {
+            makeItemCard(barcode);
+            console.log(barcode);
+            barcode = "";
+        }
+    }, 250)
 }

@@ -4,14 +4,19 @@
   "description": "Inventory management and barcode utility for Gandom chain of stores",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . Gandom --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=Gandom --version-string.FileDescription=Gandom --version-string.ProductName=\"Gandom\"",
+    "package-linux": "electron-packager . Gandom --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
   },
   "author": "Sayed Abid Hashimi",
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.6.1",
     "electron": "^8.1.1",
-    "jsbarcode": "^3.11.0"
+    "jsbarcode": "^3.11.0",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7"
   },
   "devDependencies": {
     "electron-packager": "^14.2.1"
