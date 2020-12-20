@@ -15,6 +15,7 @@
     "canvas": "^2.6.1",
     "electron": "^8.1.1",
     "jsbarcode": "^3.11.0",
+    "mariadb": "^2.5.2",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7"
   },

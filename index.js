@@ -43,30 +43,63 @@ function captureBarcode(e) {
     } else barcode += e.key;
 }
 
-function makeItemCard(barcodeText) {
-
-    var p = document.createElement('p');
-    p.classList.add('card-text');
-    p.textContent = "The description of the text will the here and it may contain things such as expiration date, manufactured date and more...";
+function makeItemCard(queryResult) {
 
     var h4 = document.createElement('h4');
-    h4.classList.add('card-title');
-    h4.textContent = "Name of Product";
+    //h4.classList.add('card-title');
+    h4.textContent = queryResult.productName;
+
+    var strong = document.createElement('strong');
+    strong.textContent = "Price: ";
+
+    var span = document.createElement('span');
+    span.textContent = queryResult.price + "Afs";
+
+    var p = document.createElement('p');
+    //p.classList.add('card-text');
+    p.appendChild(strong);
+    p.appendChild(span);
 
     var div = document.createElement('div');
-    div.classList.add("card-body");
+    //div.classList.add("card-body");
     div.appendChild(h4);
     div.appendChild(p);
 
-    var h5 = document.createElement('h5');
-    h5.classList.add('card-header');
-    h5.textContent = barcodeText;
+    var p2 = document.createElement('p');
+    //h5.classList.add('card-header');
+    p2.textContent = "Expiration Date: " + queryResult.expDate;
+
+    var label = document.createElement('label');
+    label.setAttribute("for", "amount");
+    label.textContent = "Select the amount: ";
+    
+    var select = document.createElement('select');
+    select.setAttribute("name", "amount");
+    select.setAttribute("id", "amount");
+
+    for(i = 1; i <= Number(queryResult.remAmount); i++) {
+
+        var option = document.createElement('option');
+        option.setAttribute("value", i);
+        option.textContent = i;
+        console.log(i);
+        select.appendChild(option);
+    }
+
+    var div2 = document.createElement('div');
+    //root.classList.add('card');
+    div2.appendChild(p2);
+    div2.appendChild(label);
+    div2.appendChild(select);
+
+    var div3 = document.createElement('div');
+    div3.classList.add("card-content");
+    div3.appendChild(div);
+    div3.appendChild(div2);
 
     var root = document.createElement('div');
-    root.classList.add('card');
-    root.appendChild(h5);
-    root.appendChild(div);
-    root.style.margin = '0 0 20px'
+    root.classList.add("purchase-card");
+    root.appendChild(div3);
 
     var cardContainer = document.querySelector(".purchase .card-container");
     cardContainer.appendChild(root);
@@ -76,9 +109,14 @@ function makeItemCard(barcodeText) {
 function submitBarcode() {
     setTimeout(() => {
         if (!isPrefixMet) {
-            makeItemCard(barcode);
-            console.log(barcode);
+            ipcRenderer.send("app:queryToDatabase", barcode);
             barcode = "";
         }
     }, 250)
 }
+
+
+// Incoming events for Renderer process
+ipcRenderer.on('app:queryFromDatabase', (e, result) => {
+    if(result) makeItemCard(result);
+});

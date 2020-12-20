@@ -1,0 +1,30 @@
+create table products (
+productID int not null unique auto_increment,
+barcode varchar(255) unique not null,
+productName varchar(255) not null,
+price float(24) not null,
+remAmount int not null,
+regDate datetime not null,
+expDate date not null,
+description varchar(500),
+primary key(productID));
+
+insert into products values(
+NULL,
+"9781524763138",
+"BECOMING by Michelle Obama",
+252,
+12,
+"2020-12-19 20:33:03",
+"2024-12-19",
+"This is a very good book");
+
+insert into products values(
+NULL,
+"9780857501004",
+"A Brief History of Time by Stephen Hawking",
+540,
+6,
+"2010-12-19 20:33:03",
+"2026-12-19",
+"This is also a very good book");

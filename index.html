@@ -3,9 +3,6 @@
 
 <head>
 
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -25,32 +22,51 @@
 </head>
 
 <body>
-    <div class="row status-bar">
+    <!-- <div class="row status-bar">
         <div class="col-12">
-            <!-- <img class="logo" src="assets/logo.png" alt="" srcset=""> -->
-            <h1 class="title">Gandom Inventory Management System</h1>
+            <img class="logo" src="assets/logo.png" alt="" srcset="">
+            <h1 class="title">Gandom Inventory<br>Management System</h1>
             <button style="cursor: default;" class="btn btn-outline-success" id="exit-btn">Exit System</button>
         </div>
-    </div>
-    <div class="row main-bar">
-        <div class="col notification">
-            <h2 class="sub-title">Notifications</h2>
-            <hr>
-            <div class="card-container"></div>
-        </div>
-        <div class="col-6 purchase">
-            <h2 class="sub-title">Purchase</h2>
-            <hr>
-            <div class="card-container">
+    </div> -->
+    <button style="cursor: default;" id="exit-btn"><strong>Exit System</strong></button>
+    <div class="main-bar">
+        <div class="banner">
+            <div>
+                <img class="logo" src="assets/logo.png" alt="" srcset="">
+                <hr>
+            </div>
+            <div class="btn-panel">
+                <button style="cursor: default;" id="cancel-btn"><strong>Cancel</strong></button>
+                <button style="cursor: default;" id="process-btn"><strong>Process</strong></button>
 
             </div>
         </div>
-        <div class="col to-do">
-            <h2 class="sub-title">To-do</h2>
-            <hr>
-            <div class="card-container"></div>
+        <div class="purchase">
+            <div>
+                <h2 class="sub-title">Purchase</h2>
+                <hr>
+            </div>
+            <div class="card-container">
+                <div class="purchase-card">
+                    <!-- <div class="card-content">
+                        <div>
+                            <h4>Product Name</h4>
+                            <p><strong>Price: </strong><span>33 Afs</span></p>
+                        </div>
+                        <div>
+                            <p>Expiration date: </p>
+                            <label for="amount">Select the amount:</label>
+                            <select name="amount" id="amount">
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>
