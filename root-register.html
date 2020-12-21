@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root-register.css">
+    <script defer src="root-register.js"></script>
+
+    <title>Root Register Privileges</title>
+
+</head>
+
+<body>
+    <h1>Register: root access granted</h1>
+    <form action="#" method="post">
+        <button type="button" id="load-barcode-btn">Load From Barcode Scanner</button>
+        <button type="button" id="load-keyboard-btn">Get From Keyboard</button>
+
+        <label for="generate">Generate Barcode? </label>
+        <input type="checkbox" name="generate" id="generate"><br>
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <label for="barcode" style="display: none;" id="barcode-label">Barcode: </label>
+
+                </td>
+                <td>
+                    <input type="text" name="barcode" id="barcode" style="display: none;" required><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="productName">Product Name: </label>
+
+                </td>
+                <td>
+                    <input type="text" name="productName" id="productName" required><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="price">Price: </label>
+
+                </td>
+                <td>
+                    <input type="number" name="price" id="price" required><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="remAmount">Remaining Amount in store: </label>
+
+                </td>
+                <td>
+                    <input type="number" name="remAmount" id="remAmount" required><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="regDate">Registration Date: </label>
+
+                </td>
+                <td>
+                    <input type="date" name="regDate" id="regDate" required><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="expDate">Expiration Date :</label>
+
+                </td>
+                <td>
+                    <input type="date" name="expDate" id="expDate" required><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description">Description:</label>
+
+                </td>
+                <td>
+                    <input type="text" name="description" id="description" required><br>
+
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Register to Database" id="submit-btn" />
+        <input type="reset" style="margin-left: 70px;" value="Clear Field" id="clearfields-btn" />
+        <!-- <input  type="submit" value="Register to Database"> -->
+    </form>
+</body>
+
+</html>

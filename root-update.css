@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "defaultMedium";
+    src: url("fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+    font-family: "defaultRegular";
+    src: url("fonts/Ubuntu-Regular.ttf");
+}
+
+body {
+    font-family: defaultRegular;
+    background-color: #f0f0f0;
+    margin: 0 20px;
+    user-select: none;
+}

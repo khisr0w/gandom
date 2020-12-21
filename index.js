@@ -40,7 +40,13 @@ function captureBarcode(e) {
 
     if (e.keyCode == 13) {
         isPrefixMet = false;
-    } else barcode += e.key;
+    }
+    else if (e.keyCode == 16) {
+
+    }
+    else {
+        barcode += e.key;
+    }
 }
 
 function makeItemCard(queryResult) {

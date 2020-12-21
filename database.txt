@@ -4,7 +4,7 @@ barcode varchar(255) unique not null,
 productName varchar(255) not null,
 price float(24) not null,
 remAmount int not null,
-regDate datetime not null,
+regDate date not null,
 expDate date not null,
 description varchar(500),
 primary key(productID));
@@ -15,7 +15,7 @@ NULL,
 "BECOMING by Michelle Obama",
 252,
 12,
-"2020-12-19 20:33:03",
+"2020-12-19",
 "2024-12-19",
 "This is a very good book");
 
@@ -25,6 +25,36 @@ NULL,
 "A Brief History of Time by Stephen Hawking",
 540,
 6,
-"2010-12-19 20:33:03",
+"2010-12-19",
 "2026-12-19",
 "This is also a very good book");
+
+insert into products values(
+NULL,
+"GMS0000000000",
+"Random Thing",
+1000,
+2,
+"2010-12-19 20:33:03",
+"2026-12-19",
+"This is the first of the tests");
+
+insert into products values(
+NULL,
+"GMS0000000021",
+"Random Thing 2",
+1000,
+2,
+"2010-12-19 20:33:03",
+"2026-12-19",
+"This is the first of the tests");
+
+insert into products values(
+NULL,
+"GMS0000000009",
+"Random Thing 2",
+1000,
+2,
+"2010-12-19 20:33:03",
+"2026-12-19",
+"This is the first of the tests");

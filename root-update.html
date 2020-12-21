@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root-update.css">
+    <script defer src="root-update.js"></script>
+
+    <title>Root Update Privileges</title>
+
+</head>
+
+<body>
+    <h1>Update: root access granted</h1>
+    <button type="button" id="load-barcode-btn">Load From Barcode Scanner</button>
+    <button type="button" id="load-keyboard-btn">Get From Keyboard</button>
+
+    <hr>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <label for="barcode" id="barcode-label">Barcode: </label>
+            </td>
+            <td>
+                <input type="text" name="barcode" id="barcode" required disabled><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="productName">Product Name: </label>
+
+            </td>
+            <td>
+                <input type="text" name="productName" id="productName" required disabled><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="price">Price: </label>
+
+            </td>
+            <td>
+                <input type="number" name="price" id="price" required disabled><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="remAmount">Remaining Amount in store: </label>
+
+            </td>
+            <td>
+                <input type="number" name="remAmount" id="remAmount" required disabled><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="regDate">Registration Date: </label>
+
+            </td>
+            <td>
+                <input type="date" name="regDate" id="regDate" required disabled><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="expDate">Expiration Date :</label>
+
+            </td>
+            <td>
+                <input type="date" name="expDate" id="expDate" required disabled><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="description">Description:</label>
+
+            </td>
+            <td>
+                <input type="text" name="description" id="description" required disabled><br>
+
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Update to Database" id="submit-btn" />
+    <!-- <input  type="submit" value="Register to Database"> -->
+</body>
+
+</html>
