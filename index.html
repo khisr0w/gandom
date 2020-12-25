@@ -38,31 +38,40 @@
             </div>
             <div class="btn-panel">
                 <button style="cursor: default;" id="clear-btn"><strong>Clear</strong></button>
-                <button style="cursor: default;" id="process-btn"><strong>Process</strong></button>
-
+                <button style="cursor: default;" id="process-btn" disabled><strong>Process</strong></button>
+            </div>
+            <div class="order-info">
+                <h3>Total Price</h3>
+                <hr>
+                <h2 id="total-price">- - -</h2>
             </div>
         </div>
         <div class="purchase">
+            <div class="keyboard-barcode-panel">
+                <img src="assets/keyboard.png" class="add-keyboard-barcode" alt="">
+                <input type="text" style="display: none;" class="keyboard-barcode-field">
+            </div>
             <div>
                 <h2 class="sub-title">Purchase</h2>
                 <hr>
             </div>
             <div class="card-container">
-                <div class="purchase-card">
-                    <!-- <div class="card-content">
+                <!-- <div class="purchase-card">
+                    <div class="card-content">
                         <div>
                             <h4>Product Name</h4>
-                            <p><strong>Price: </strong><span>33 Afs</span></p>
+                            <label for="price">Price</label>
+                            <input type="number" name="price" id="price" style="margin-bottom: 20px;"><span> Afs</span>
                         </div>
                         <div>
                             <p>Expiration date: </p>
                             <label for="amount">Select the amount:</label>
-                            <select name="amount" id="amount">
+                            <select name="amount" id="amount" style="margin-top: 10px;">
                                 <option value="1">1</option>
                             </select>
                         </div>
-                    </div> -->
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -70,3 +79,5 @@
 </body>
 
 </html>
+
+<!-- 5056070923911 -->

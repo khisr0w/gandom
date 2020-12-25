@@ -21,7 +21,7 @@ NULL,
 
 insert into products values(
 NULL,
-"9780857501004",
+"GMS0857501004",
 "A Brief History of Time by Stephen Hawking",
 540,
 6,
@@ -58,3 +58,26 @@ NULL,
 "2010-12-19 20:33:03",
 "2026-12-19",
 "This is the first of the tests");
+
+=================================================
+
+create table orders (
+orderID int not null unique auto_increment,
+orderDate date not null,
+primary key(orderID));
+
+create table order_items (
+orderItemID int not null unique auto_increment,
+productID int not null,
+productPrice float(24) not null,
+productAmount int not null,
+orderID int not null,
+primary key(orderItemID),
+foreign key(productID) references products(productID),
+foreign key(orderID) references orders(orderID));
+
+GRANT INSERT ON `gandom`.`orders` TO `cashier`@`localhost`;
+GRANT INSERT ON `gandom`.`order_items` TO `cashier`@`localhost`;
+GRANT SELECT ON `gandom`.`products` TO `cashier`@`localhost`;
+GRANT SELECT, UPDATE (remAmount) ON `gandom`.`products` TO `cashier`@`localhost`;
+GRANT UPDATE (remAmount) ON gandom.products to cashier@localhost;

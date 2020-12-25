@@ -123,6 +123,7 @@ function initBarcodeListen(e) {
     if(isPrefixMet) captureBarcode(e);
     else isPrefixMet = matchPrefix(e);
 }
+
 function matchPrefix(e) {
 
     if (e.keyCode == 49 && prefix.length == 0) {

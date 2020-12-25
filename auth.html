@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root-register.css">
+    <script defer src="auth.js"></script>
+    <title>Root Register Privileges</title>
+
+</head>
+
+<body>
+    <h1>Authenticate root</h1>
+    <form action="#" method="post">
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <label for="username">Username: </label>
+
+                </td>
+                <td>
+                    <input type="text" name="username" id="username" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password: </label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" required><br>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Authenticate" id="auth-btn" />
+        <input type="reset" style="margin-left: 110px; margin-top: 30px;" value="Cancel" id="cancel-btn" />
+        <!-- <input  type="submit" value="Register to Database"> -->
+    </form>
+</body>
+
+</html>
